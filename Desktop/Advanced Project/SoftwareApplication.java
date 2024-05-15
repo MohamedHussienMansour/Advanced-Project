@@ -58,7 +58,7 @@ public class SoftwareApplication extends Application {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-/*
+
          try {
             // Creating five Student objects
             Student student1 = new Student("John Doe", "12345", "123 Main St", "Male", "Canada", "S123", "rich");
@@ -103,10 +103,13 @@ public class SoftwareApplication extends Application {
             ListsOfCourses.add(courses.get(0));
             ListsOfCourses.add(interactiveCourse2);
             ListsOfCourses.add(courses.get(3));
-            System.out.println(ListsOfCourses.get(0).compareTo(ListsOfCourses.get(1)));
+
+            for (Course course : ListsOfCourses) {
+                System.out.println(course.getName()+ " - Price: " + course.getPrice());
+            }
             // Sorting the ListsOfCourses ArrayList
             Collections.sort(ListsOfCourses);
-
+            System.out.println("#############################################################################");
             // Printing the sorted list
             for (Course course : ListsOfCourses) {
                 System.out.println(course.getName()+ " - Price: " + course.getPrice());
@@ -139,13 +142,14 @@ public class SoftwareApplication extends Application {
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
         }
-*/
+
         launch();
     }
 
 
     @Override
     public void start(Stage primaryStage) {
+
         
        ArrayList<Student> Students = new ArrayList<>();
 //////////////////////////////////////Student Stage///////////////////////////////////////////
@@ -235,7 +239,7 @@ public class SoftwareApplication extends Application {
 //        p.getChildren().addAll(v);
 
         // Set the scene and stage
-        Scene ls = new Scene(lv,500,500);
+        Scene ls = new Scene(lv,500,800);
         LoginStage.setScene(ls);
         LoginStage.setTitle("Course Application");
 //////////////////////////////////////Student Stage///////////////////////////////////////////
@@ -712,204 +716,12 @@ public class SoftwareApplication extends Application {
         primaryStage.setScene(scene);
         primaryStage.setTitle("Course Application");
         primaryStage.show();
-//        
-//        
-                
+           
 
     }
 
 
 
-
-//    @Override
-//    public void start(Stage stage) throws Exception {
-//        
-//        
-//
-////        Button button1 =new Button("My button1");
-////        Button button2 =new Button("My button2");
-////        Button button3 =new Button("My button3");
-////        Button button4 =new Button("My button4");
-////        Button button5 =new Button("My button5");
-////        Button button6 =new Button("My button6");
-//        
-////        Text text=new Text("Welecom to my window");
-////        StackPane stackpane=new StackPane();
-////        
-////        FlowPane flowpane=new FlowPane(Orientation.HORIZONTAL);
-////        flowpane.getChildren().addAll(button1,button2,button3,button4,button5,button6);
-////        flowpane.setVgap(50);
-////        flowpane.setHgap(50);
-////        flowpane.setPadding(new Insets(50));
-////        
-////        stackpane.getChildren().add(button);
-// 
-//        Button button =new Button("Add Name");
-//        Circle circle=new Circle();
-//        circle.setCenterX(300);
-//        circle.setCenterX(300);
-//        circle.setRadius(10);
-//        
-////        Image img=new Image("https://upload.wikimedia.org/wikipedia/ar/thumb/9/98/%D8%B9%D9%85_%D8%AF%D9%87%D8%A8_%28%D8%AF%D9%8A%D8%B2%D9%86%D9%8A%29.png/273px-%D8%B9%D9%85_%D8%AF%D9%87%D8%A8_%28%D8%AF%D9%8A%D8%B2%D9%86%D9%8A%29.pnghttps://upload.wikimedia.org/wikipedia/ar/thumb/9/98/%D8%B9%D9%85_%D8%AF%D9%87%D8%A8_%28%D8%AF%D9%8A%D8%B2%D9%86%D9%8A%29.png/273px-%D8%B9%D9%85_%D8%AF%D9%87%D8%A8_%28%D8%AF%D9%8A%D8%B2%D9%86%D9%8A%29.png");
-////        ImageView imgview =new ImageView(img);
-////        System.out.println(img.getHeight());
-////        
-////        Pane pane =new Pane();
-////        pane.getChildren().add(imgview);
-//        Color color =new Color(0.4,0.9,1,0.1);
-//
-//        Text FirstName=new Text("First Name: ");
-//        TextField FirstNameField=new TextField();
-//        Text MI=new Text("MI Name: ");
-//        TextField MIField=new TextField();
-//        Text LastName=new Text("Last Name: ");
-//        TextField LastNameField=new TextField();
-//        HBox hbox=new HBox();
-//        Text Description=new Text("the Description");
-////        Description.setFont(new Font("Arial",24));
-//        Description.setFont(Font.font("Arial", FontWeight.BOLD,FontPosture.ITALIC, 14));
-//        hbox.setBackground(new Background(new BackgroundFill(Color.rgb(200,0, 220,0),new CornerRadii(0),new Insets(0))));
-//        GridPane gridpane=new GridPane();  
-//        hbox.getChildren().addAll(Description);
-//        gridpane.add(hbox, 1, 5);
-//        gridpane.add(FirstName, 0, 0);
-//        gridpane.add(FirstNameField, 1, 0);
-//        gridpane.add(MI, 0, 1);
-//        gridpane.add(MIField, 1, 1);
-//        gridpane.add(LastName, 0, 2);
-//        gridpane.add(LastNameField, 1, 2);
-//        gridpane.add(button, 1, 3);
-//        gridpane.add(circle, 1, 4);
-//        gridpane.setBackground(new Background(new BackgroundFill(color,new CornerRadii(0),new Insets(0))));
-//
-//        gridpane.setVgap(20);
-//        gridpane.setHgap(100);
-//        gridpane.setPadding(new Insets(50));
-//        
-////
-////        
-////    
-//        Handler hander=new Handler();
-//        button.setOnAction(hander);
-//                
-//        
-//        
-//        Scene scene=new Scene(gridpane,500,500);
-//        stage.setTitle("Course Application");
-//        
-//        
-////        stage.setResizable(false);
-//        
-//        
-//        
-//        
-//        
-//        stage.setScene(scene);
-//        
-////        stage.show();
-////        
-//        
-//        
-//        
-//        
-//        
-//        
-//        
-//        
-//        
-//        
-//        
-//        
-//        
-////        Text text =new Text("Welecom to my application");
-//
-////        
-////        
-////        StackPane StackPane =new StackPane();
-////        FlowPane flowpane =new FlowPane();
-////        flowpane.getChildren().addAll(button1,button2,button3,button4,button5,button6);
-////    flowpane.setOrientation(Orientation.HORIZONTAL);
-////        flowpane.setHgap(20);
-////        flowpane.setVgap(20);
-////        flowpane.setPadding(new Insets(20));
-////        
-////        
-////        Scene  scene= new Scene(flowpane,500,500);
-////        stage.setScene(scene);
-////  
-////
-////        stage.setTitle("My Application");
-////        stage.show();
-//
-//        
-//        
-////        stage.setResizable(false);
-//        
-////        Stage stage_2=new Stage();
-////        stage_2.show();
-//
-//        Stage newStage=new Stage();
-//        
-//        Circle c=new Circle();
-//        c.setRadius(50);
-////        
-////        VBox v=new VBox();
-////        GridPane gp=new GridPane();
-////        Button b1 =new Button("Stertch");
-////        Button b2 =new Button("Shrink");
-////        gp.add(b1, 0, 0);
-////        gp.add(b2, 1, 0);
-////        gp.setHgap(40);
-////        
-////        b2.setOnAction(e->{
-////            System.out.println("yeh");
-////            c.setRadius(c.getRadius()-20);
-////        });
-////        b1.setOnAction(e->{
-////            System.out.println("yeh");
-////            c.setRadius(c.getRadius()+20);
-////        });
-//        c.setCenterX(200);
-//        c.setCenterY(50);
-////        c.setOnMouseDragged(e ->{
-////            c.setCenterX(e.getX());
-////            c.setCenterY(e.getY());
-////        });
-////        c.setOnMouseClicked(e ->{
-////               System.out.println("yeh");
-////        });
-////
-////        
-////        gp.setPadding(new Insets(50,100,320,50));
-////    
-//        Pane sp =new Pane(c);
-//        sp.setPadding(new Insets(50));
-////
-////        v.getChildren().addAll(sp,gp);
-////        v.setPadding(new Insets(30));
-//
-//
-//        
-//
-//        Scene s= new Scene(sp,500,500);
-//        s.setOnKeyPressed(e ->{
-//            if (e.getCode()== KeyCode.UP)
-//               c.setCenterY(c.getCenterY()-20);
-//            else if (e.getCode()== KeyCode.DOWN)
-//               c.setCenterY(c.getCenterY()+20);
-//            else if (e.getCode()== KeyCode.RIGHT)
-//               c.setCenterX(c.getCenterX()+20);
-//            else if (e.getCode()== KeyCode.LEFT)
-//               c.setCenterX(c.getCenterX()-20);
-//        });
-//
-//        newStage.setScene(s);
-//        
-//        newStage.show();
-//        
-//        
-//
-    }
-
+    }   
     
 
